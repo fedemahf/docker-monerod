@@ -6,8 +6,8 @@ Simple Docker container for Monero CLI Wallet.
 
 ### `docker build -t monero-wallet-cli .`
 
-Builds the container.
+Build the container.
 
-## `docker run -it -v ${pwd}/wallet:/home/monero/wallet monero-wallet-cli`
+### `docker run -it -v ${pwd}/wallet:/home/monero/wallet monero-wallet-cli`
 
-Runs the container in interactive mode. Run `cd ~ && ./bin/monero-wallet-cli` to run the wallet.
+Run the container in interactive mode. Run `cd ~ && ./bin/monero-wallet-cli` to run the wallet.

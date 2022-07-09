@@ -18,7 +18,7 @@ RUN \
   tar -xf monero-linux-x64-v0.17.3.2.tar.bz2 && \
   mv /tmp/monero-x86_64-linux-gnu-v0.17.3.2/* /home/monero/bin && \
   rm -rf /tmp/* && \
-	chown -R monero:monero /home/monero
+  chown -R monero:monero /home/monero
 
 VOLUME /home/monero/wallet
 
