@@ -22,11 +22,9 @@ RUN \
 
 VOLUME /home/monero/wallet
 
-EXPOSE 18080
-EXPOSE 18081
-
 # Switch to user monero
 USER monero
+WORKDIR /home/monero/wallet
 
-ENTRYPOINT ["/bin/bash"]
-# ENTRYPOINT ["/bin/bash", "/home/monero/entrypoint.sh"]
+# ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/home/monero/wallet/monero-wallet-cli.sh"]
