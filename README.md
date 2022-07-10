@@ -18,4 +18,4 @@ Build the container.
 
 ### `./run.sh`
 
-Run the container in interactive mode. Run `./monero-wallet-cli.sh` inside the container to run the wallet.
+Run Monero CLI Wallet.
