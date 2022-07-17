@@ -9,16 +9,17 @@ RUN \
 # Create monero user
 RUN \
   adduser --system --group --disabled-password monero && \
-  mkdir -p /home/monero/wallet /home/monero/bin
+  mkdir -p /home/monero/wallet
 
 # Download and extract monero binaries
 RUN \
   cd /tmp && \
-  curl -L -O https://downloads.getmonero.org/cli/monero-linux-x64-v0.17.3.2.tar.bz2 && \
-  tar -xf monero-linux-x64-v0.17.3.2.tar.bz2 && \
-  mv /tmp/monero-x86_64-linux-gnu-v0.17.3.2/* /home/monero/bin && \
+  curl -L -O https://downloads.getmonero.org/cli/linux64 && \
+  tar -xvf linux64 && \
+  mv /tmp/monero-x86_64-linux-gnu-*/* /usr/local/bin && \
   rm -rf /tmp/* && \
-  chown -R monero:monero /home/monero
+  chown -R monero:monero /usr/local/bin/monero* && \
+  chown -R monero:monero /home/monero/wallet
 
 VOLUME /home/monero/wallet
 
