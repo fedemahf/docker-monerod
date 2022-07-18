@@ -1,6 +1,6 @@
-# Docker Monero CLI Wallet
+# Docker Monero daemon
 
-Simple Docker container for Monero CLI Wallet.
+Simple Docker container for Monero daemon.
 
 ## Configuration
 
@@ -18,4 +18,8 @@ Build the container.
 
 ### `./run.sh`
 
-Run Monero CLI Wallet.
+Run Monero daemon.
+
+## References
+
+- [Guide | How to run your own Monero node](https://www.coincashew.com/coins/overview-xmr/guide-or-how-to-run-a-full-node) at coincashew.com
