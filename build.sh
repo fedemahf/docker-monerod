@@ -18,4 +18,4 @@ if ! [ -f "${DIR_WALLET}/${SCRIPT_FILE}" ]; then
 fi
 
 # Build container
-docker build -t monero-wallet-cli .
+docker build -t monerod .

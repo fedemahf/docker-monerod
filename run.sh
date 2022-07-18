@@ -12,4 +12,4 @@ fi
 . ${ENVIRONMENT_FILE}
 
 # Run the container
-docker run -it -v ${DIR_WALLET}:/home/monero/wallet monero-wallet-cli
+docker run -it -v ${DIR_WALLET}:/home/monero/wallet monerod

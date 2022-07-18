@@ -30,6 +30,17 @@ RUN \
   chown -R monero:monero /usr/local/bin/monero* && \
   chown -R monero:monero /home/monero/wallet
 
+RUN \
+  mkdir /var/log/monero && \
+  mkdir /var/lib/monero && \
+  touch /var/lib/monero/monerod.conf
+
+COPY monerod.conf /var/lib/monero/monerod.conf
+
+RUN \
+  chown -R monero:monero /var/lib/monero && \
+  chown -R monero:monero /var/log/monero
+
 VOLUME /home/monero/wallet
 
 # Switch to user monero
