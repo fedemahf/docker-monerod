@@ -26,26 +26,17 @@ RUN \
 # Create and configure monero user
 RUN \
   adduser --system --group --disabled-password monero && \
-  mkdir -p /home/monero/wallet && \
-  chown -R monero:monero /usr/local/bin/monero* && \
-  chown -R monero:monero /home/monero/wallet
+  mkdir -p /home/monero/chain/log /home/monero/chain/lib && \
+  chown -R monero:monero /usr/local/bin/monero*
+
+# COPY monerod.conf /home/monero/chain/monerod.conf
 
 RUN \
-  mkdir /var/log/monero && \
-  mkdir /var/lib/monero && \
-  touch /var/lib/monero/monerod.conf
-
-COPY monerod.conf /var/lib/monero/monerod.conf
-
-RUN \
-  chown -R monero:monero /var/lib/monero && \
-  chown -R monero:monero /var/log/monero
-
-VOLUME /home/monero/wallet
+  chown -R monero:monero /home/monero
 
 # Switch to user monero
 USER monero
-WORKDIR /home/monero/wallet
+WORKDIR /home/monero
 
 # ENTRYPOINT ["/bin/bash"]
-ENTRYPOINT ["/home/monero/wallet/monero-wallet-cli.sh"]
+ENTRYPOINT ["/home/monero/chain/monero-daemon.sh"]

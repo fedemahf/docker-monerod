@@ -1,2 +1,2 @@
 #!/bin/bash
-export DIR_WALLET=/home/user/monero/wallet
+export DIR_CHAIN=/home/user/monero/chain
