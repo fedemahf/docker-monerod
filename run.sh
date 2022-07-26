@@ -12,4 +12,4 @@ fi
 . ${ENVIRONMENT_FILE}
 
 # Run the container
-docker run -it -v ${DIR_CHAIN}:/home/monero/chain monerod
+docker run -it --network host -v ${DIR_CHAIN}:/home/monero/chain monerod
