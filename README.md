@@ -20,4 +20,4 @@ Run Monero daemon.
 - [Running Monero Open Node + Tor Onion](https://monerodocs.org/running-node/open-node-tor-onion/) at monerodocs.org
 
 ## See also
-- [fedemahf/docker-monero-wallet-cli](https://github.com/fedemahf/docker-monero-wallet-cli) - Simple Docker container for Monero CLI Wallet
+- [fedemahf/docker-monerod](https://github.com/fedemahf/docker-monerod) - Simple Docker container for Monero daemon
